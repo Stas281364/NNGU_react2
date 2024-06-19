@@ -1,0 +1,112 @@
+:root {
+
+    --core-back-color: #e7e6f7;
+    --back-color1: #E3D0D8;
+    --color2: #C6D2ED;
+    --color3: #aea3b0;
+}
+
+body{
+
+    background-color: var(--core-back-color);
+    
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.logform{
+
+    display: flex;
+    justify-content: center;
+
+    border: 3px solid var(--color3);
+    border-radius: 30px;
+
+    background-color: var(--back-color1);
+    max-width: 500px;
+    align-items: center;
+    margin: 10% auto;
+
+   
+}
+
+
+.logform__inside{
+
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    border-color: blueviolet;
+
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    min-width: 320px;
+    
+}
+
+.logform__title{
+
+    text-align: center;
+    font-weight: 900;
+}
+
+.logform__form{
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.logform__form_login{
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.logform__form_password{
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.logform__input_login{
+
+    min-height: 30px;
+    border-radius: 15px;
+}
+
+.logform__input_password{
+
+    min-height: 30px;
+    border-radius: 15px;
+}
+
+.logform__input_button{
+
+    min-height: 30px;
+    border-radius: 15px;
+    
+
+}
+
+.logform__input_button:hover{
+
+    background-color: var(--color3);
+}
+
+.logform__input_button__NavLink{
+
+    display: flex;
+    align-content: stretch;
+    flex-direction: column;
+    text-decoration: none;
+    
+}
+
