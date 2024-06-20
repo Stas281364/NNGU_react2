@@ -11,16 +11,18 @@ import { Children } from 'react';
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageFoundain />,
+    element: <LoginPage />,
 
-    children: [
-      {
-        path: "/123",
-        element: <LoginForm/>,
-      },
-    ],
   },
   {
+    
+    path: "/PageFoundain",
+    element: <PageFoundain/>,
+    children: [
+      {
+        
+      }
+    ],
     
   }
 ]);

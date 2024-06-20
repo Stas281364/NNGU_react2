@@ -1,11 +1,29 @@
 
 import style from "../login/loginform.module.css"
 import { TimeCopmonent } from "components/Time";
-import { NavLink } from 'react-router-dom';
+import { useState } from "react";
+import { NavLink, json } from 'react-router-dom';
 
 export const LoginForm = () => {
     console.log('loginform');
+    const [login, setlogin] = useState("");
+    const [pass, setpass] = useState("");
+
+    //const response = GetHttpAuthentication(login, pass);
+    fetch('http://localhost:3003/api/shop')
+    .then((response) => response.json())
+    .then((response) => {
+        console.log(response);
+        setlogin((login) => login = response[0].login);
+        setpass((pass) => pass = response[0].password);
+    })
+    .catch((reason) => console.log(reason))
     
+    
+    console.log(login);
+    console.log(pass);
+    
+
     return(
         
         <div>
@@ -37,7 +55,7 @@ export const LoginForm = () => {
                                 <input className={style.logform__input_password} type="text" name="password" id="password" />
                             </div>
 
-                            <NavLink to="/123" className={style.logform__input_button__NavLink}>
+                            <NavLink to="/PageFoundain" className={style.logform__input_button__NavLink}>
                                 <button type="submit" className={style.logform__input_button}>Войти</button>
                             </NavLink>
                         
@@ -53,3 +71,24 @@ export const LoginForm = () => {
         
     )
 }
+
+async function GetHttpAuthentication() {
+
+    const response = await fetch('http://localhost:3003/api/shop');
+    let resjason = null;
+    if (response.ok) { // если HTTP-статус в диапазоне 200-299
+    // получаем тело ответа (см. про этот метод ниже)
+    resjason = await response.json();
+    //console.log(resjason);
+    //console.log(resjason[0].name);
+    
+    return [{login: resjason[0].login, password: resjason[0].password},
+    {login: resjason[1].login, password: resjason[1].password}];
+    } else {
+    alert("Ошибка HTTP: " + response.status);
+    return 0;
+    }
+
+    
+}
+
