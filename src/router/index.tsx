@@ -7,6 +7,7 @@ import { Panel } from 'components/Panel/panel';
 import { Root } from 'root';
 import { PageFoundain } from 'CascadePages/PageFoundain/PageFoundain';
 import { Children } from 'react';
+import { ContentObject } from 'CascadePages/ContentObject/ContentObject';
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +21,8 @@ export const router = createBrowserRouter([
     element: <PageFoundain/>,
     children: [
       {
-        
+        index: true,
+        element: <ContentObject/>,
       }
     ],
     

@@ -26,11 +26,11 @@ export const TimeCopmonent = () =>{
     }, [MyTimer]);
 
     return(
-        <div>
-            <div className={style.time}>
-                {TimeNow}
-            </div>
+        
+        <div className={style.time}>
+            {TimeNow}
         </div>
+        
         
         
     )
