@@ -8,6 +8,12 @@ import { Root } from 'root';
 import { PageFoundain } from 'CascadePages/PageFoundain/PageFoundain';
 import { Children } from 'react';
 import { ContentObject } from 'CascadePages/ContentObject/ContentObject';
+import { ContentGrid } from 'CascadePages/ContentGrid/ContentGrid';
+
+const Veronika = "Veronika";
+const Petrova = "Petrova";
+const Olesya = "Olesya";
+const Kalimova = "Kalimova";
 
 export const router = createBrowserRouter([
   {
@@ -22,9 +28,9 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <ContentObject/>,
+        element: <ContentGrid />,
       }
     ],
-    
+ 
   }
 ]);

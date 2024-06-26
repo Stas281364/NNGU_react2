@@ -4,7 +4,7 @@ import style from "./TimeComponent.module.css"
 
 
 export const TimeCopmonent = () =>{
-    console.log("time");
+    // console.log("time");
     const Time = new Date();
     const TimeNow = (Time.getHours() < 10 ? "0" : "") + Time.getHours() + " : " +  
     (Time.getMinutes() < 10 ? "0" : "") + Time.getMinutes() + " : " +

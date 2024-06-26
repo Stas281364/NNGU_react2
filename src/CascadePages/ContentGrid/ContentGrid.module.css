@@ -1,0 +1,16 @@
+:root {
+
+    --core-back-color: #e7e6f7;
+    --back-color1: #E3D0D8;
+    --color2: #C6D2ED;
+    --color3: #aea3b0;
+}
+
+.grid{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    gap: 30px;
+}
