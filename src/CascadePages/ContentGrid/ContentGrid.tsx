@@ -1,9 +1,6 @@
-import { ReactNode, useEffect, useState } from "react"
 import style from "./ContentGrid.module.css"
-import { ContentObject, TlistmandataProps, Tmandata } from "CascadePages/ContentObject/ContentObject"
-import { Iceo ,CeoData, CeoDataProps } from "Common/Ceo"
-import { useSelector } from "react-redux"
-import { getid, getname, getsecond_name } from "store/UserData"
+import { ContentObject, TlistmandataProps } from "CascadePages/ContentObject/ContentObject"
+
 
 // type PostCardProps = {
 //     postData: Article;
